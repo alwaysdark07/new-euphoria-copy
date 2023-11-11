@@ -5,7 +5,7 @@ import axios from 'axios'
 export const fetchLanguageThunk = createAsyncThunk('fetchLanguage/getLanguageData', async (params, { rejectWithValue }, c) => {
     console.log(params, c)
     try {
-        const res = await axios.get(`http://localhost:8000/api/translate`, {
+        const res = await axios.get(`https://mern-euphoria-copy.onrender.com//api/translate`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept-Language': params
