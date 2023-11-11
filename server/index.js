@@ -3,6 +3,7 @@ import 'dotenv/config'
 // const connectDB = require("./connectDB")
 // const users = require("./models/users")
 // const mongoose = require("mongoose")
+import fs from 'fs';
 import express from 'express'
 import { connectDB } from "./connectDB.js"
 import { users } from "./models/users.js"
@@ -13,9 +14,14 @@ import zlib from 'zlib'
 import { engtrans } from './models/engtrans.js'
 import { esptrans } from './models/esptrans.js'
 import { hintrans } from './models/hintrans.js'
-import engLangLocal from './translations/en.json' assert {type: "json"}
-import espLangLocal from './translations/es.json' assert {type: "json"}
-import hinLangLocal from './translations/Hindi.json' assert {type: "json"}
+
+// import engLangLocal from './translations/en.json' assert {type: "json"}
+// import espLangLocal from './translations/es.json' assert {type: "json"}
+// import hinLangLocal from './translations/Hindi.json' assert {type: "json"}
+
+const engLangLocal = JSON.parse(fs.readFileSync('./translations/en.json'))
+const espLangLocal = JSON.parse(fs.readFileSync('./translations/es.json'))
+const hinLangLocal = JSON.parse(fs.readFileSync('./translations/Hindi.json'))
 
 const i18n = new I18n({
     locales: ['en', 'Hindi', 'es'],
