@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *{
+  padding: 5px;
+} */ 
+/* html {
+  font-family: 'CoreSans', system-ui, sans-serif;
+} */
+
+  @font-face {
+    font-family: 'CoreSans';
+    src: local('CoreSans'), url(./fonts/coresans/Fontspring-DEMO-coresansc35.otf) format('opentype');
+    /* other formats include: 'woff2', 'truetype, 'opentype', 'embedded-opentype', and 'svg' */
+  }
+
+
+

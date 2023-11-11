@@ -1,0 +1,9 @@
+{
+    "header": {
+        "search_placeholder": "Search",
+        "login_text": "Login",
+        "sign_up_text": "Sign Up"
+    },
+    "sidebar": {"hi":"hi"},
+    "footer": {"hi":"hi"}
+}

@@ -1,0 +1,1 @@
+export const violet = '#8A33FD'
