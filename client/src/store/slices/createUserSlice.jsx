@@ -5,7 +5,7 @@ import axios from 'axios'
 export const fetchAllUsers = createAsyncThunk('createUser/fetchUsersAll', async (a, { rejectWithValue }, c) => {
     console.log(a, c)
     try {
-        const res = await axios.get(`https://mern-euphoria-copy.onrender.com/api/users`)
+        const res = await axios.get(`https://api-euphoria.onrender.com/api/users`)
         return res.data.data
     } catch (error) {
         return rejectWithValue(error.response.data.error)
