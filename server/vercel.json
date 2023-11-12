@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "name": "music-album",
     "builds": [
         {
             "src": "index.js",
@@ -12,5 +11,6 @@
             "src": "/(.*)",
             "dest": "/index.js"
         }
-    ]
+    ],
+    "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }]
 }
