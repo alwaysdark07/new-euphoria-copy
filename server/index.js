@@ -163,3 +163,5 @@ async function updateMongoTrans() {
 updateMongoTrans()
 
 app.listen(port, () => console.log(`app started on port ${port}`))
+
+export default app
