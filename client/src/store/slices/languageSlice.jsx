@@ -5,7 +5,7 @@ import axios from 'axios'
 export const fetchLanguageThunk = createAsyncThunk('fetchLanguage/getLanguageData', async (params, { rejectWithValue }, c) => {
     console.log(params, c)
     try {
-        const res = await axios.get(`https://api-euphoria.onrender.com/api/translate`, {
+        const res = await axios.get(`https://api-euphoria.vercel.app/api/translate`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept-Language': params
