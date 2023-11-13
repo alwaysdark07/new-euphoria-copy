@@ -19,9 +19,15 @@ import { hintrans } from './models/hintrans.js'
 // import espLangLocal from './translations/es.json' assert {type: "json"}
 // import hinLangLocal from './translations/Hindi.json' assert {type: "json"}
 
-const engLangLocal = JSON.parse(fs.readFileSync('./translations/en.json'))
-const espLangLocal = JSON.parse(fs.readFileSync('./translations/es.json'))
-const hinLangLocal = JSON.parse(fs.readFileSync('./translations/Hindi.json'))
+// const engLangLocal = JSON.parse(fs.readFileSync('./translations/en.json'))
+// const espLangLocal = JSON.parse(fs.readFileSync('./translations/es.json'))
+// const hinLangLocal = JSON.parse(fs.readFileSync('./translations/Hindi.json'))
+
+const engLangLocal = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'translations/en.json')))
+const espLangLocal = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'translations/es.json')))
+const hinLangLocal = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'translations/Hindi.json')))
+
+console.log(engLangLocal)
 
 const i18n = new I18n({
     locales: ['en', 'Hindi', 'es'],
@@ -161,6 +167,8 @@ async function updateMongoTrans() {
 }
 
 updateMongoTrans()
+
+console.log(process.cwd())
 
 app.listen(port, () => console.log(`app started on port ${port}`))
 
