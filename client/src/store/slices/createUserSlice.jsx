@@ -5,7 +5,7 @@ import axios from 'axios'
 export const fetchAllUsers = createAsyncThunk('createUser/fetchUsersAll', async (a, { rejectWithValue }, c) => {
     console.log(a, c)
     try {
-        const res = await axios.get(`https://api-euphoria.vercel.app/api/users`)
+        const res = await axios.get(`https://good-gray-fly-gown.cyclic.app/api/users`)
         return res.data.data
     } catch (error) {
         return rejectWithValue(error.response.data.error)
